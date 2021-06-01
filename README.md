@@ -13,3 +13,7 @@ Build a program
 Run the program you built
 
     ./hello
+
+## Links
+
+- [C Standard Library Reference](https://www.tutorialspoint.com/c_standard_library/)
