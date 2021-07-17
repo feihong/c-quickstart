@@ -14,6 +14,10 @@ Run the program you built
 
     ./hello
 
+Build `hello` program
+
+    make hello
+
 ## Links
 
 - [C Standard Library Reference](https://www.tutorialspoint.com/c_standard_library/)
