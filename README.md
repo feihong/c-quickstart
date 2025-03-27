@@ -2,17 +2,13 @@
 
 ## Installation
 
-Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
+    just install
 
 ## Commands
 
-Build a program
+Build a program and run a program
 
-    cc hello.c -o hello
-
-Run the program you built
-
-    ./hello
+    clang -Wall hello.c && ./a.out
 
 Build `hello` program
 

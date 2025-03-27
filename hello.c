@@ -18,6 +18,8 @@ int main() {
     return 0;
   }
 
+  puts("你好世界！");
+
   for (int i=1; i <= n; i++) {
     if (i % 7 == 0) {
       printf("%d. 再见宇宙！\n", i);
