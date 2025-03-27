@@ -1,5 +1,7 @@
 source ~/.zshrc
 
+PROMPT='%F{magenta}[C]%f%F{cyan}%~%f:~$ '
+
 b() {
   echo "clang -Wall $1"
   clang -Wall $1
