@@ -1,31 +1,40 @@
-#include <stdio.h>
-#include <time.h>
+#include <wchar.h>
 #include <stdlib.h>
+#include <locale.h>
 
-int randInt(int n) {
-  return rand() % n;
+int getRandomInt(int min, int max) {
+  static int seeded = 0;
+  if (!seeded) {
+      srand(time(NULL));
+      seeded = 1;
+  }
+  return min + rand() % (max - min + 1);
+}
+
+wchar_t getRandomHanzi() {
+  return getRandomInt(0x4e00, 0x9fff);
 }
 
 int main() {
-  // Initialize random number generator
-  time_t t;
-  time(&t);
-  srand((unsigned) t);
+  setlocale(LC_ALL, ""); // absolutely won't work without calling this
 
-  int n = randInt(16);
-  if (n == 0) {
-    printf("Nope\n");
-    return 0;
-  }
+  puts("你好世界！\n");
 
-  puts("你好世界！");
+  puts("Some random hanzi for you:");
 
-  for (int i=1; i <= n; i++) {
-    if (i % 7 == 0) {
-      printf("%d. 再见宇宙！\n", i);
-    } else {
-      printf("%d. 你好世界！\n", i);
+  int loopCount = getRandomInt(1, 8);
+
+  for (int i=0; i < loopCount; i++) {
+    wchar_t str[9];
+    for (int j=0; j < 8; j++) {
+      str[j] = getRandomHanzi();
     }
+    str[8] = 0;
+
+    wprintf(L"%i %ls\n", i+1, str);
   }
+
+  puts("");
+
   return 0;
 }
