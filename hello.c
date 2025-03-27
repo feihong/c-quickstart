@@ -30,14 +30,14 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  for (int i=0; i < loopCount; i++) {
-    wchar_t str[9];
-    for (int j=0; j < 8; j++) {
+  for (int i=1; i <= loopCount; i++) {
+    wchar_t str[i + 1];
+    for (int j=0; j < i; j++) {
       str[j] = getRandomHanzi();
     }
-    str[8] = 0;
+    str[i] = 0;
 
-    wprintf(L"%i %ls\n", i+1, str);
+    wprintf(L"%i %ls\n", i, str);
   }
 
   puts("");
