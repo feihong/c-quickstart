@@ -10,6 +10,10 @@ Build a program and run a program
 
     clang -Wall hello.c && ./a.out
 
+Start C programming environment (includes useful aliases defined in `env/.zshenv`)
+
+    just env
+
 Build `hello` program
 
     make hello

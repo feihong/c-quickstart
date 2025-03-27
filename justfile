@@ -1,5 +1,7 @@
 env:
-  ZDOTDIR=env zsh
+  # Starting C programming environment...
+  ZDOTDIR=env zsh || true
+  # Stopped C programming environment
 
 install:
   #!/usr/bin/env zsh

@@ -1,7 +1,5 @@
 source ~/.zshrc
 
-echo 'Starting C programming environment...'
-
 b() {
   echo "clang -Wall $1"
   clang -Wall $1
@@ -20,4 +18,4 @@ w() {
 }
 compdef _files w
 
-alias q='echo "Stopping C programming environment"; exit'
+alias q='exit 0'
