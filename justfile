@@ -1,9 +1,7 @@
+set shell := ["nu", "-c"]
+
 env:
-  # Starting C programming environment...
-  ZDOTDIR=env zsh || true
-  # Stopped C programming environment
+  nu --config env.nu
 
 install:
-  #!/usr/bin/env zsh
-  (( $+commands[entr] )) || brew install entr
-  (( $+commands[clang] )) || xcode-select --install
+  if (which clang | is-empty) { xcode-select --install }

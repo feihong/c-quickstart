@@ -2,6 +2,7 @@
 
 ## Installation
 
+    brew install nushell
     just install
 
 ## Commands
@@ -10,7 +11,7 @@ Build a program and run a program
 
     clang -Wall hello.c && ./a.out
 
-Start C programming environment (includes useful aliases defined in `env/.zshenv`)
+Start C programming environment (includes useful aliases defined in `env.nu`)
 
     just env
 
